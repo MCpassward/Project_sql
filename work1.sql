@@ -75,6 +75,8 @@ WHERE Fees.amount > 5000;
 SELECT Student.dept_id, COUNT(*)
 FROM Student
 GROUP BY Student.dept_id;
+#conceptual diagram
+![conceptual diagram](https://github.com/user-attachments/assets/cec114c9-f118-442f-af9c-1cda59426e18)
 
 SELECT Student.student_name, Department.dept_name, Fees.amount
 FROM Student, Department, Fees
