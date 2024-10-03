@@ -1,6 +1,6 @@
 ##SQL Schema and Query Operations for University Database
       
-1. Table Creation
+1. Table Creation:
     Department Table:
     
        CREATE TABLE Department(
@@ -24,7 +24,7 @@
        FOREIGN KEY(student_id) REFERENCES Student(student_id)
        );
 
-    Fees Table
+    Fees Table:
 
        CREATE TABLE Fees(
        student_id NUMBER,
@@ -34,7 +34,7 @@
        FOREIGN KEY(dept_id) REFERENCES Department(dept_id)
        );
 
-2. Inserting Data into Tables
+2. Inserting Data into Tables:
     Inserting Departments:
 
        INSERT INTO Department VALUES(101, 'Computer Science');
@@ -63,35 +63,35 @@
        INSERT INTO Fees VALUES(203, 103, 5500);
        INSERT INTO Fees VALUES(204, 104, 6000);
     
-3. Altering the Student Table
-    Adding new columns to the Student table
+3. Altering the Student Table,
+    Adding new columns to the Student table:
 
        ALTER TABLE Student ADD age NUMBER;
        ALTER TABLE Student ADD phone_no VARCHAR2(15);
        ALTER TABLE Student ADD gender VARCHAR2(10);
        ALTER TABLE Student ADD marital_status VARCHAR2(10);
 
-    Updating the Student Table
+    Updating the Student Table,
     Updating specific student information:
 
        UPDATE Student
        SET phone_no = '0789998888'
        WHERE student_id = 201;
 
-    This updates Alice Johnson's phone number
+    This updates Alice Johnson's phone number:
 
        UPDATE Student
        SET age = 22
        WHERE student_id = 202;
 
-    This updates Bob Smith's age to 22
+    This updates Bob Smith's age to 22:
 
        UPDATE Student
        SET marital_status = 'single'
        WHERE student_id = 203;
 
-5. Select Queries
-    Joining Student and Fees to display student names and fees
+5. Select Queries,
+    Joining Student and Fees to display student names and fees:
 
        SELECT Student.student_name, Fees.amount
        FROM Student
@@ -103,7 +103,7 @@
        FROM Student
        JOIN Department ON Student.dept_id = Department.dept_id;
 
-    Retrieving all students older than 21
+    Retrieving all students older than 21:
 
        SELECT *
        FROM Student
