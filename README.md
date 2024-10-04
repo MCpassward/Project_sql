@@ -1,5 +1,5 @@
-##SQL Schema and Query Operations for University Database
-      
+#[SQL Schema and Query Operations for University Database]
+```SQL
 1. Table Creation:
     Department Table:
     
@@ -144,7 +144,8 @@
        FROM Student, Department, Fees
        WHERE Student.dept_id = Department.dept_id
        AND Student.student_id = Fees.student_id;
-     conceptual diagram:  
+```
+conceptual diagram:  
    ![conceptual diagram](https://github.com/user-attachments/assets/665f8a65-1c93-4aff-8976-8b27f4703bdb)
 
     
