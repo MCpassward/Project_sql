@@ -1,4 +1,4 @@
-#[SQL Schema and Query Operations for University Database]
+# [SQL Schema and Query Operations for University Database](https://example.com)
 ```SQL
 1. Table Creation:
     Department Table:
